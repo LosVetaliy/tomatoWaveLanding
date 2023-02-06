@@ -8,11 +8,6 @@ body {
 
 }
 
-.light-mode {
-    background-color: whitesmoke;
-    color: rgb(20, 20, 20);
-}
-
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -24,7 +19,6 @@ body {
     background-color: #2b2b2b;
     padding: auto;
     height: 80px;
-    /* color: whitesmoke; */
     font-weight: bold;   
 }
 
@@ -36,6 +30,7 @@ body {
 }
 
 .logoText {
+    margin: 16px 0;
     padding: 0px;
     font-weight: 700;
     font-size: 30px;
@@ -49,9 +44,7 @@ body {
     font-size: 20px;
 }
 
-/* .nav-item {
-
-} */
+/* .nav-item {} */
 
 .nav-link{
     color: whitesmoke;
@@ -67,19 +60,24 @@ body {
 }
 
 .post {
+    border: 2px solid #2b2b2b;
+    border-radius: 20px;
+    background-color: #2b2b2b;
     display: flex;
     flex-direction: row;
-    margin: 20px 0;
+    margin: 100px 0;
+    padding: 10px;
 }
 
 .post-description {
     flex-direction: column;
+    
 }
 
 .albumCover {
     height: 200px;
     width: 200px;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .title {
@@ -96,4 +94,14 @@ body {
 
 .player {
     padding: 0 0 10px 20px;
+}
+
+.light-mode {
+    background-color: whitesmoke;
+    color: rgb(20, 20, 20);
+}
+
+.lightModeForGrey {
+    background-color: whitesmoke;
+    color: rgb(20, 20, 20);
 }

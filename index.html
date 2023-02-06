@@ -12,27 +12,35 @@
 <body>
     <script type="module" src="../js/main.js"></script>
     <script type="module" src='../fixtures/files.js'></script>
+
     <!-- Header -->
-    <header class="header">
-        <div class="container">
+    <header class="header grey">
+        <div class="container ">
 
             <!-- Header Nav -->
             <div class="header-nav">
-                <a class="logoText">TOMATO<br />WAVE</a>
-                <nav class="nav-list">
+                <a class="logoText" data-value="TOMATO">TOMATO</a>
+                
+                <nav class="nav-list grey">
                     <ul class="nav-list">
                         <li>
-                            <button onclick="myFunction()">day/night</button>
+                            <button class="nav-item" onclick="myFunction()">day/night</button>
                             <script>
                             function myFunction() {
-                            var element = document.body;
-                            element.classList.toggle("light-mode");
+                            const bodyEl = document.body;
+                            bodyEl.classList.toggle("light-mode");
+                            const navEl = document.querySelector('.nav-link');
+                            navEl.classList.toggle("light-mode");
+                            const greyEl = document.querySelector('.grey');
+                            navEl.classList.toggle("lightModeForGrey");
+
                             }
                             </script>
                         </li>
-                        <li class="nav-item"><a href="#!" class="nav-link">ABOUT</a></li>
+                        <li class="nav-item"><a href="#!" class="nav-link">menu</a></li>
+                        <!-- <li class="nav-item"><a href="#!" class="nav-link">ABOUT</a></li>
                         <li class="nav-item"><a href="#!" class="nav-link">MUSIC</a></li>
-                        <li class="nav-item"><a href="#!" class="nav-link">VIDEO</a></li>
+                        <li class="nav-item"><a href="#!" class="nav-link">VIDEO</a></li> -->
                     </ul>
                 </nav>
             </div>
@@ -42,43 +50,12 @@
     <!-- Posts Page -->
     <div class="container" id="app">
         <ul class="posts" >
-            <!--<li class="post" >
-                <img class="albumCover" src="/images/idlesBrutalism.jpg" alt="album cover">
-                    <div class="post-description">
-                        <h2 class="title">Idles - Brutalism</h2>
-                        <p class="description">Brutalism was originally self-released in March 2017, surpassing expectations to become one of the decade’s most important debut albums. Beneath the surface of its aggressive, foreboding music and lyrics lies a level of confessional vulnerability and honesty that comfortably cemented it as an instant classic. 
-                            In the 5 years since Brutalim’s release, IDLES have gone on to achieve so much, including a number one album, sold out tours and festival headline appearances around the world. Its follow-up, Joy As an Act of Resistance, further springboarded the band into the UK (and beyond)'s consciousness and paved the way for the colossal ‘Ultra Mono’ - the band’s first UK No. 1 album. Last year’s CRAWLER contained the buzz-saw urgency that their now global fanbase had come to expect, but expanded its sound with more melodic and introspective songs. At every step of the way the band have garnered a wealth of dedicated supporters - from the early breaks given to them by Steve Lamacq and BBC 6 Music, the independent live music circuit and the incredible AF Gang community. </p>
-                        <iframe class="player" style="border-radius:12px" src="https://open.spotify.com/embed/album/5qag6esZLv5ySuCpzh7CE6?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-            </li>
-            <li class="post">
-                <img class="albumCover" src="/images/facsLifeLike.jpeg" alt="album cover">
-                    <div class="post-description">
-                        <h2 class="title">FACS - Lifelike</h2>
-                        <p class="description">Chicago trio FACS was founded in 2017 by former Disappears members Brian Case & Noah Leger, along with their bandmate Jonathan van Herik. After van Herik amicably parted ways with the group just before their debut album "Negative Houses"'s release, Case & Leger recruited longtime friend Alianna Kalaba (Cat Power, We Ragazzi) to play bass & FACS began methodically destroying live venues across the world. "Lifelike" is their sophomore release; six tracks clocking in at half an hour, carrying forward the musical trail blazed by the debut towards a new frontier. </p>
-                        <iframe class="player" style="border-radius:12px" src="https://open.spotify.com/embed/album/5t5IJ4wFrWqaUof1cvMeP8?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
-                    </div>
-            </li>
-            <li class="post">
-                <img class="albumCover" src="/images/idlesBrutalism.jpg" alt="album cover">
-                    <div class="post-description">
-                        <h2 class="title">Idles - Brutalism</h2>
-                        <p class="description">Brutalism was originally self-released in March 2017, surpassing expectations to become one of the decade’s most important debut albums. Beneath the surface of its aggressive, foreboding music and lyrics lies a level of confessional vulnerability and honesty that comfortably cemented it as an instant classic. 
-
-                            In the 5 years since Brutalim’s release, IDLES have gone on to achieve so much, including a number one album, sold out tours and festival headline appearances around the world. Its follow-up, Joy As an Act of Resistance, further springboarded the band into the UK (and beyond)'s consciousness and paved the way for the colossal ‘Ultra Mono’ - the band’s first UK No. 1 album. Last year’s CRAWLER contained the buzz-saw urgency that their now global fanbase had come to expect, but expanded its sound with more melodic and introspective songs. At every step of the way the band have garnered a wealth of dedicated supporters - from the early breaks given to them by Steve Lamacq and BBC 6 Music, the independent live music circuit and the incredible AF Gang community. </p>
-                        <iframe class="player" style="border-radius:12px" src="https://open.spotify.com/embed/album/5qag6esZLv5ySuCpzh7CE6?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-            </li>
-            <li class="post">
-                <img class="albumCover" src="/images/facsLifeLike.jpeg" alt="album cover">
-                    <div class="post-description">
-                        <h2 class="title">FACS - Lifelike</h2>
-                        <p class="description">Chicago trio FACS was founded in 2017 by former Disappears members Brian Case & Noah Leger, along with their bandmate Jonathan van Herik. After van Herik amicably parted ways with the group just before their debut album "Negative Houses"'s release, Case & Leger recruited longtime friend Alianna Kalaba (Cat Power, We Ragazzi) to play bass & FACS began methodically destroying live venues across the world. "Lifelike" is their sophomore release; six tracks clocking in at half an hour, carrying forward the musical trail blazed by the debut towards a new frontier. </p>
-                        <iframe class="player" style="border-radius:12px" src="https://open.spotify.com/embed/album/5t5IJ4wFrWqaUof1cvMeP8?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
-                    </div>
-            </li> -->
-            
+            <!-- posts imports from js by id='app' -->    
         </ul>
     </div>
+    <!-- <script>
+        setTimeout(alert('Use vpn to open spotify player!'), 5000);
+    </script> -->
 </body>
+
 </html>
